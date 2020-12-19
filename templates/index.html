@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en", dir = "ltr">
+    <head>
+        <meta charset = "utf-8">
+        <title>Home Page</title>
+    </head>
+    <body background="">
+             
+        <h1>Titanic Survival Prediction</h1>
+        <form action="{% url 'result' %}">
+            {% csrf_token %}
+            <p>Passenger Class:</p>
+            <input type="text" class="short_input"  name = "pclass">
+            <br>
+
+            <p>Sex:</p>
+            <input type="text" class="short_input" name = "sex">
+            <br>
+
+            <p>Age:</p>
+            <input type="text" class="short_input" name = "age">
+            <br>
+
+            <p>Sibsp:</p>
+            <input type="text" class="short_input" name = "sibsp">
+            <br>
+
+            <p>Parch:</p>
+            <input type="text" class="short_input" name = "parch">
+            <br>
+
+            <p>Fare:</p>
+            <input type="text" class="short_input" name = "fare">
+            <br>
+
+            <p>Embark Category C:</p>
+            <input type="text" class="short_input" name = "embC">
+            <br>
+
+            <p>Embark Category Q:</p>
+            <input type="text" class="short_input" name = "embQ">
+            <br>
+
+            <p>Embark Category S:</p>
+            <input type="text" class="short_input" name = "embS">
+            <br>
+
+            <input type = "submit" value = "GetPredictions">
+        </form>
+    </body>
+</html>
